@@ -1,0 +1,30 @@
+<h2>Lists</h2>
+<table>
+    <tr>
+      <th>Tasks</th> 
+      <th>Action</th>
+    </tr> 
+    <tr *ngFor = "let list of lists1; index as i">
+      <td>{{list.task}}</td>
+      <td>  
+        <button (click)="deleteTodo(list)">Delete</button>
+        <button (click)="editTodo(list,i)">Edit</button>
+      </td>
+    </tr>
+</table>
+<input type="text" #newTodo1>
+<button (click) ="addTodo(newTodo1.value); newTodo1.value=''" >Add</button> 
+
+<div *ngIf = "selectedTask">
+  <input [(ngModel)] = "selectedTask.task" >
+  <button (click) ="updateTodo(selectedTask); selectedTask=''">Update</button> 
+</div>  
+
+
+<!-- <div *ngIf = "selectedTask" >
+  <input [(ngModel)] = " selectedTask.task" type="text" #newTodo1>
+  <button (click) ="selectedTask > 0 ? addTodo(newTodo1.value) : updateTodo(selectedTask);" >{{ cond_vall ? 'Update' : 'Add' }}</button> 
+ 
+</div>  -->
+
+<!-- <app-task-details [list] = "selectedTask"></app-task-details> -->

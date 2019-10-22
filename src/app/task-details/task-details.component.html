@@ -1,0 +1,29 @@
+<p>task-details works!</p>
+<!-- 
+<div *ngIf = "list">
+            <input [(ngModel)] = "list.task">
+</div>
+ -->
+
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <label>
+    Name:
+    <input type="text" formControlName="name">
+  </label>
+
+  <label>
+    Discription:
+    <input type="text" formControlName="description">
+  </label>
+
+  <label>
+    Due Date:
+    <input type="text" formControlName="dueDate">
+  </label>
+
+  <label>
+    Prioroty:
+    <input type="text" formControlName="priority">
+  </label>
+<input type= "submit" value="Submit">
+</form>

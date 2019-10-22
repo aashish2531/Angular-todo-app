@@ -1,0 +1,25 @@
+th{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    margin: 3px;
+    padding: 3px 40px 3px 40px;
+}
+td{
+    align-content: center;
+    
+}
+button{
+    color: white;
+    background-color: rgb(55, 56, 56);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px 5px 20px;
+    font-size: 16px;
+    margin: 4px;
+    cursor: pointer;
+}
+input{
+    width: 190px;   
+    height: 30px;
+}

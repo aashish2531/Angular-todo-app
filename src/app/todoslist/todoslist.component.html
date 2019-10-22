@@ -1,0 +1,22 @@
+<p>todoslist works!</p>
+<input type="text" #newTodo1>
+<button (click) ="addTodo(newTodo1.value); newTodo1.value=''" >{{ cond_vall ? 'Update' : 'Add' }}</button> 
+<table>
+    <tr>
+      <th>Tasks</th> 
+      <th>Action</th>
+    </tr> 
+    <tr *ngFor = "let todo of todos; let i = index">
+      <td>{{todo.task}}</td>
+      <td>  
+        <button (click)="deleteTodo(todo)">Delete</button>
+        <button (click)="editTodo(i)">Edit</button>
+      </td>
+    </tr>
+</table>
+<!-- <app-dialog [(visible)]="showDialog">
+  <h1>Hello World</h1>
+  <button (click)="showDialog = !showDialog" class="btn">Close</button>
+</app-dialog> -->
+
+<app-task-details></app-task-details>
