@@ -11,7 +11,9 @@ import { FooterComponent } from './footer/footer.component';
 import { TaskDetailsComponent } from './task-details/task-details.component';
 import { ListsComponent } from './lists/lists.component';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }  from './in-memory-data.service';
+import { TaskListComponent } from './task-list/task-list.component';
+import { UpdateTaskComponent } from './update-task/update-task.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { InMemoryDataService }  from './in-memory-data.service';
     SidebarComponent,
     FooterComponent,
     TaskDetailsComponent,
-    ListsComponent
+    ListsComponent,
+    TaskListComponent,
+    UpdateTaskComponent
    
   ],
   imports: [
@@ -31,9 +35,8 @@ import { InMemoryDataService }  from './in-memory-data.service';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    )
+    Ng2SearchPipeModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

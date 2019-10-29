@@ -1,0 +1,20 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="email">Name:</label>
+            <input type="text" class="form-control" formControlName='name'>
+          </div>
+          <div class="form-group">
+            <label for="email">Description:</label>
+            <input type="email" class="form-control" formControlName="description">
+          </div>
+          <div class="form-group">
+            <label for="email">Due Date:</label>
+            <input type="email" class="form-control" formControlName="dueDate">
+          </div>
+          <div class="form-group">
+            <label for="email">Priority:</label>
+            <input type="email" class="form-control" formControlName="priority">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        
