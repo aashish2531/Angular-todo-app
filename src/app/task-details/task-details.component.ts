@@ -11,6 +11,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { Pipe, PipeTransform } from '@angular/core';
 import { DatePipe } from '@angular/common';
 
+
+
 @Pipe({ name: 'mypipe' })
 export class Mypipe implements PipeTransform {
   // adding a default format in case you don't want to pass the format
@@ -27,23 +29,24 @@ export class Mypipe implements PipeTransform {
   styleUrls: ['./task-details.component.css']
 })
 export class TaskDetailsComponent  {
-  @Input() list: List;
-  lists1: List[];
+ // @Input() list: List;
+ 
   searchText;
   constructor(private fb: FormBuilder, private listSrvs: ListService) { }
   
   pageUsers : any;
   // sortList: [];
+  
   profileForm = this.fb.group({
     name: ['', Validators.required],
     description: [''],
     dueDate: [''],
     priority: [''],
   });
-
+   
   public ngOnInit(){
     this.showdata();
-    //this.assignCopy();
+   
   }
 
   showdata(){

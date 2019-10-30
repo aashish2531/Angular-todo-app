@@ -26,7 +26,6 @@ export class ListService {
 
   addData(data) {
     let adddata = JSON.stringify(data)
-    console.log(adddata);
     return this.http.post('https://todo-app-apis.herokuapp.com/task', adddata, this.httpOptions)
   }
 

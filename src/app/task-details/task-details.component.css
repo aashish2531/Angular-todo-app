@@ -29,3 +29,9 @@ th{
     color: white ;
     border-style: none ;
 }
+.scrl{
+    overflow-y: scroll;
+    width: 110px;
+  height: 110px;
+  overflow: scroll;
+}

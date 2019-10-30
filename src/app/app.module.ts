@@ -14,7 +14,8 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { TaskListComponent } from './task-list/task-list.component';
 import { UpdateTaskComponent } from './update-task/update-task.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-
+import { CartComponent } from './cart/cart.component';
+import {DatePipe} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     TaskDetailsComponent,
     ListsComponent,
     TaskListComponent,
-    UpdateTaskComponent
+    UpdateTaskComponent,
+    CartComponent
    
   ],
   imports: [
@@ -38,7 +40,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     Ng2SearchPipeModule
     
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
